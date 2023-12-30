@@ -3,7 +3,29 @@ entries:
   kubernetes-dashboard:
   - apiVersion: v2
     appVersion: v3.0.0-alpha0
-    created: "2023-12-30T15:23:19.643611Z"
+    created: "2023-12-30T15:34:45.523445Z"
+    description: General-purpose web UI for Kubernetes clusters
+    digest: 70c816be4f9cba1fbbfa2a9dcc892f976a14381b128bf74978940f0343ef425b
+    home: https://github.com/kubernetes/dashboard
+    icon: https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.svg
+    keywords:
+    - kubernetes
+    - dashboard
+    kubeVersion: '>=1.21.0-0'
+    maintainers:
+    - email: cdesaintmartin@wiremind.fr
+      name: desaintmartin
+    - email: s.florek91@gmail.com
+      name: floreks
+    name: kubernetes-dashboard
+    sources:
+    - https://github.com/kubernetes/dashboard
+    urls:
+    - https://raw.githubusercontent.com/matthewmiled/mmiles-pi-cluster-helm-repo/master/docs/kubernetes-dashboard-7.0.1-alpha1.tgz
+    version: 7.0.1-alpha1
+  - apiVersion: v2
+    appVersion: v3.0.0-alpha0
+    created: "2023-12-30T15:34:45.521657Z"
     description: General-purpose web UI for Kubernetes clusters
     digest: c2a96e3e922457e6a406bbd6d223520c579770ecb7e622e1dcd8a682b6736e1e
     home: https://github.com/kubernetes/dashboard
@@ -23,4 +45,4 @@ entries:
     urls:
     - https://raw.githubusercontent.com/matthewmiled/mmiles-pi-cluster-helm-repo/master/docs/kubernetes-dashboard-7.0.0-alpha1.tgz
     version: 7.0.0-alpha1
-generated: "2023-12-30T15:23:19.641986Z"
+generated: "2023-12-30T15:34:45.518571Z"
