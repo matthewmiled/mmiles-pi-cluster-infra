@@ -1,3 +1,13 @@
+# Personal Notes
+
+Had to also do the following in order to access dashboard:
+
+* Bind the ServiceAccount to the admin cluster role:
+  * `kubectl create clusterrolebinding kubernetes-dashboard --clusterrole=cluster-admin --serviceaccount=infra:kubernetes-dashboard`
+
+* 
+
+
 # Kubernetes Dashboard
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/kubernetes/dashboard)](https://goreportcard.com/report/github.com/kubernetes/dashboard)
