@@ -6,7 +6,7 @@ entries:
       artifacthub.io/prerelease: '{{IS_PRERELEASE}}'
     apiVersion: v1
     appVersion: v1.11.2
-    created: "2023-12-30T18:02:52.244204Z"
+    created: "2023-12-30T18:05:20.305159Z"
     description: A Helm chart for cert-manager
     digest: 895e4ada52b70fa48dadfc1433f5c56620ec97bc7c1d93be2c820253a50129e5
     home: https://github.com/cert-manager/cert-manager
@@ -38,7 +38,7 @@ entries:
       artifacthub.io/prerelease: "false"
     apiVersion: v2
     appVersion: 1.9.5
-    created: "2023-12-30T18:02:52.252143Z"
+    created: "2023-12-30T18:05:20.316385Z"
     description: Ingress controller for Kubernetes using NGINX as a reverse proxy
       and load balancer
     digest: a1c0b65a27f4564e0509e05f1e7a229c521305dfed757e5d05cdfc878e4c597a
@@ -62,9 +62,9 @@ entries:
   kubernetes-dashboard:
   - apiVersion: v2
     appVersion: v3.0.0
-    created: "2023-12-30T18:02:52.254828Z"
+    created: "2023-12-30T18:05:20.319306Z"
     description: General-purpose web UI for Kubernetes clusters
-    digest: 940ba2b113c2741c2d69f9eb00cbac809ab683598312359246858fb46e0da923
+    digest: a7b34479c63af8fff6e59cd7e08d45d818128135b2670a820e603da0335fc24f
     home: https://github.com/kubernetes/dashboard
     icon: https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.svg
     keywords:
@@ -80,6 +80,6 @@ entries:
     sources:
     - https://github.com/kubernetes/dashboard
     urls:
-    - https://raw.githubusercontent.com/matthewmiled/mmiles-pi-cluster-helm-repo/master/docs/kubernetes-dashboard-7.0.0.tgz
-    version: 7.0.0
-generated: "2023-12-30T18:02:52.238144Z"
+    - https://raw.githubusercontent.com/matthewmiled/mmiles-pi-cluster-helm-repo/master/docs/kubernetes-dashboard-7.0.1.tgz
+    version: 7.0.1
+generated: "2023-12-30T18:05:20.299809Z"
