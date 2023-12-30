@@ -275,7 +275,7 @@ metricsScraper:
 ##  - https://github.com/kubernetes-sigs/metrics-server
 ##  - https://github.com/kubernetes-sigs/metrics-server/tree/master/charts/metrics-server
 metrics-server:
-  enabled: true
+  enabled: false
   args:
     - --kubelet-preferred-address-types=InternalIP
     - --kubelet-insecure-tls
@@ -283,7 +283,7 @@ metrics-server:
 ## Optional Cert Manager sub-chart configuration
 ## Enable this if you don't already have cert-manager enabled on your cluster.
 cert-manager:
-  enabled: true
+  enabled: false
   installCRDs: true
 
 ## Optional Nginx Ingress sub-chart configuration
