@@ -5,9 +5,15 @@ Had to also do the following in order to access dashboard:
 * Bind the ServiceAccount to the admin cluster role:
   * `kubectl create clusterrolebinding kubernetes-dashboard --clusterrole=cluster-admin --serviceaccount=infra:kubernetes-dashboard`
 
-* 
+* Then to access the dashboard locally, port-forward the nginx-ingress service:
+  * ` kubectl -n infra port-forward svc/ingress-nginx-controller 8443:443`
+  * And go to `localhost:8443`
 
+* You will then need a token to login:
+  * `kubectl create token kubernetes-dashboard --namespace infra`
+  * Copy and paste it into browser login page
 
+  
 # Kubernetes Dashboard
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/kubernetes/dashboard)](https://goreportcard.com/report/github.com/kubernetes/dashboard)
