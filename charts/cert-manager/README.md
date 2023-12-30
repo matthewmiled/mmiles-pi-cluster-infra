@@ -1,3 +1,8 @@
+# Personal Note
+Also need to manually install the CRDs:
+
+`kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.1.1/cert-manager.crds.yaml`
+
 # cert-manager
 
 cert-manager is a Kubernetes addon to automate the management and issuance of
