@@ -5,10 +5,10 @@ entries:
       artifacthub.io/license: Apache-2.0
       artifacthub.io/prerelease: '{{IS_PRERELEASE}}'
     apiVersion: v1
-    appVersion: v0.1.0
-    created: "2023-12-30T17:22:08.225647Z"
+    appVersion: v1.11.2
+    created: "2023-12-30T17:27:17.578851Z"
     description: A Helm chart for cert-manager
-    digest: df9cde73b68e1b3ae7b1f7868eb4e92b304cfe9763011736954f7c7f286671b9
+    digest: 895e4ada52b70fa48dadfc1433f5c56620ec97bc7c1d93be2c820253a50129e5
     home: https://github.com/cert-manager/cert-manager
     icon: https://raw.githubusercontent.com/cert-manager/cert-manager/d53c0b9270f8cd90d908460d69502694e1838f5f/logo/logo-small.png
     keywords:
@@ -25,8 +25,8 @@ entries:
     sources:
     - https://github.com/cert-manager/cert-manager
     urls:
-    - https://raw.githubusercontent.com/matthewmiled/mmiles-pi-cluster-helm-repo/master/docs/cert-manager-v0.1.0.tgz
-    version: v0.1.0
+    - https://raw.githubusercontent.com/matthewmiled/mmiles-pi-cluster-helm-repo/master/docs/cert-manager-v1.11.2.tgz
+    version: v1.11.2
   ingress-nginx:
   - annotations:
       artifacthub.io/changes: |-
@@ -38,7 +38,7 @@ entries:
       artifacthub.io/prerelease: "false"
     apiVersion: v2
     appVersion: 1.9.5
-    created: "2023-12-30T17:22:08.237891Z"
+    created: "2023-12-30T17:27:17.584885Z"
     description: Ingress controller for Kubernetes using NGINX as a reverse proxy
       and load balancer
     digest: a1c0b65a27f4564e0509e05f1e7a229c521305dfed757e5d05cdfc878e4c597a
@@ -62,7 +62,7 @@ entries:
   kubernetes-dashboard:
   - apiVersion: v2
     appVersion: v3.0.0
-    created: "2023-12-30T17:22:08.240698Z"
+    created: "2023-12-30T17:27:17.591114Z"
     description: General-purpose web UI for Kubernetes clusters
     digest: 60c8f710a36ae7fd5e58c190a254ee968a48203c7ef0dc9b6a0d1f2ea1b74d1c
     home: https://github.com/kubernetes/dashboard
@@ -82,4 +82,4 @@ entries:
     urls:
     - https://raw.githubusercontent.com/matthewmiled/mmiles-pi-cluster-helm-repo/master/docs/kubernetes-dashboard-7.0.0.tgz
     version: 7.0.0
-generated: "2023-12-30T17:22:08.216643Z"
+generated: "2023-12-30T17:27:17.573936Z"
