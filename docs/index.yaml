@@ -11,7 +11,7 @@ entries:
       artifacthub.io/prerelease: "false"
     apiVersion: v2
     appVersion: 1.9.5
-    created: "2023-12-30T16:38:55.928736Z"
+    created: "2023-12-30T17:16:16.6486Z"
     description: Ingress controller for Kubernetes using NGINX as a reverse proxy
       and load balancer
     digest: a1c0b65a27f4564e0509e05f1e7a229c521305dfed757e5d05cdfc878e4c597a
@@ -35,9 +35,9 @@ entries:
   kubernetes-dashboard:
   - apiVersion: v2
     appVersion: v3.0.0
-    created: "2023-12-30T16:38:55.935056Z"
+    created: "2023-12-30T17:16:16.651032Z"
     description: General-purpose web UI for Kubernetes clusters
-    digest: 8bc6dbaf4d111fe2ec364b9f85fae0ac56f9bfdce5162e4db379bde9baa0a97e
+    digest: 60c8f710a36ae7fd5e58c190a254ee968a48203c7ef0dc9b6a0d1f2ea1b74d1c
     home: https://github.com/kubernetes/dashboard
     icon: https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.svg
     keywords:
@@ -55,4 +55,4 @@ entries:
     urls:
     - https://raw.githubusercontent.com/matthewmiled/mmiles-pi-cluster-helm-repo/master/docs/kubernetes-dashboard-7.0.0.tgz
     version: 7.0.0
-generated: "2023-12-30T16:38:55.922613Z"
+generated: "2023-12-30T17:16:16.639581Z"
