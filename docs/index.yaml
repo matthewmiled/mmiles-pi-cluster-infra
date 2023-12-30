@@ -3,9 +3,9 @@ entries:
   kubernetes-dashboard:
   - apiVersion: v2
     appVersion: v3.0.0
-    created: "2023-12-30T16:06:59.504779Z"
+    created: "2023-12-30T16:18:26.088809Z"
     description: General-purpose web UI for Kubernetes clusters
-    digest: 8dce016290d1b7d83ec0c5b37eb254640417882c89211417bc05254a5dff5eac
+    digest: 038419723b67f0b60f0e25c0d9e3a4c93e956eb5204c70e6931bf8eef53900e8
     home: https://github.com/kubernetes/dashboard
     icon: https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.svg
     keywords:
@@ -21,6 +21,6 @@ entries:
     sources:
     - https://github.com/kubernetes/dashboard
     urls:
-    - https://raw.githubusercontent.com/matthewmiled/mmiles-pi-cluster-helm-repo/master/docs/kubernetes-dashboard-7.0.1.tgz
-    version: 7.0.1
-generated: "2023-12-30T16:06:59.484734Z"
+    - https://raw.githubusercontent.com/matthewmiled/mmiles-pi-cluster-helm-repo/master/docs/kubernetes-dashboard-7.0.0.tgz
+    version: 7.0.0
+generated: "2023-12-30T16:18:26.085776Z"
