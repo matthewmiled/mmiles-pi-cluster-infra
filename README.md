@@ -35,3 +35,8 @@ helm repo update
 helm upgrade --install <chart-name> mmiles-pi-cluster-helm-repo/<chart-name> --namespace <test|infra|prod> --dry-run
 ```
 
+* Can search releases using:
+
+```commandline
+helm search repo
+```
