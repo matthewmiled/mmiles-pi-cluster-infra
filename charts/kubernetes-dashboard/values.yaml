@@ -213,7 +213,7 @@ web:
 ### Container to scrape, store, and retrieve a window of time from the Metrics Server.
 ### refs: https://github.com/kubernetes-sigs/dashboard-metrics-scraper
 metricsScraper:
-  enabled: false
+  enabled: true
   role: metrics-scraper
   image:
     repository: docker.io/kubernetesui/metrics-scraper
@@ -289,7 +289,7 @@ cert-manager:
 ## Optional Nginx Ingress sub-chart configuration
 ## Enable this if you don't already have nginx-ingress enabled on your cluster.
 nginx:
-  enabled: false
+  enabled: true
   controller:
     electionID: ingress-controller-leader
     ingressClassResource:
