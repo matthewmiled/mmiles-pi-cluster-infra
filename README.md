@@ -3,6 +3,12 @@ Repository for Helm charts that are deployed to Pi Cluster
 
 # Usage
 
+### Manifests
+
+Manifests can be installed just using `kubectl apply -f /path/to/dir/ --context mmiles-pi-cluster`
+
+### Helm
+
 * Whenever you edit/create a chart in `charts/`, it needs to be firstly packaged to the `docs/` folder (don't forget to bump chart version):
 
 ```commandline
