@@ -74,7 +74,7 @@ spec:
         command: ["/init/init.sh"]
         volumeMounts:
         - name: pms-config
-          mountPath: /chttps://api.geotogether.com/support/config
+          mountPath: /config
         - name: init-script-configmap
           mountPath: /init
         

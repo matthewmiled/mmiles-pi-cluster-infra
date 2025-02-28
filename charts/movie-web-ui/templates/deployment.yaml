@@ -33,18 +33,38 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+            - name: UI_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: movie-web-ui-creds
+                  key: username
+            - name: UI_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: movie-web-ui-creds
+                  key: password
+            - name: MOVIE_API_HOST    # the name of the movie-api service in the cluster
+              value: movie-api
+            - name: MOVIE_API_PORT
+              value: '8009'
+
           ports:
             - name: http
               containerPort: {{ .Values.service.port }}
               protocol: TCP
-          livenessProbe:
-            httpGet:
-              path: /
-              port: http
-          readinessProbe:
-            httpGet:
-              path: /
-              port: http
+
+          volumeMounts:
+            - mountPath: /app/web_ui/volume
+              name: plex-media
+#          livenessProbe:
+#            httpGet:
+#              path: /health
+#              port: http
+#          readinessProbe:
+#            httpGet:
+#              path: /readiness
+#              port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
@@ -59,3 +79,7 @@ spec:
       tolerations:
         {{- toYaml . | nindent 8 }}
       {{- end }}
+      volumes:
+      - name: plex-media
+        persistentVolumeClaim:
+          claimName: plex-media-pvc
