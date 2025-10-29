@@ -21,42 +21,26 @@ For upgrades:
 
 ### DNS Resolution
 
-Since installing pihole, there has been a few DNS resolution issues (because pihole itself acts as a nameserver).
+Since installing pihole, there has been a few DNS resolution issues (because pihole itself acts as a nameserver). A lot of the solutions using `systemd-resolved` to dynamically update the `/etc/resolv.conf` didn't seem to work on the pis, but this slightly hacky one did.
 
 If DNS fails (e.g. pods can't pull images), check which nameservers are being used on the pis:
 
 ```
-matt@mmiles-pi-master-00:~$ resolvectl status
-Global
-           Protocols: -LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported
-    resolv.conf mode: stub
-         DNS Servers: 9.9.9.9
-Fallback DNS Servers: 1.1.1.1
-
-...
+matt@mmiles-pi-worker-01:~$ cat /etc/resolv.conf
+nameserver 1.1.1.1
+nameserver 8.8.8.8
+nameserver 9.9.9.9
 ```
 
-9.9.9.9 and 1.1.1.1 are the Quad9 and Cloudflare nameservers. If they don't appear, then you can add them by doing the following:
+1.1.1.1, 8.8.8.8 and 9.9.9.9 are the Cloudflare, Google and Quad9 nameservers. If none of them appear, then you can add them by doing the following:
 
 
-1. Run `sudo nano /etc/systemd/resolved.conf`
+1. Disabling systemctl: `sudo systemctl disable --now systemd-resolved`
 
-2. Inside that file, make sure it looks like the below:
+2. Removing the existing file: `sudo rm /etc/resolv.conf`
 
-```
-[Resolve]
-DNS=9.9.9.9
-FallbackDNS=1.1.1.1
-DNSStubListener=yes
-```
+3. Repopulating it with the nameservers: `echo -e "nameserver 1.1.1.1\nnameserver 8.8.8.8\nnameserver 9.9.9.9" | sudo tee /etc/resolv.conf`
 
-3. Run `sudo systemctl restart systemd-resolved`
-
-4. Run `sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf`
-
-5. The 9.9.9.9 and 1.1.1.1 nameservers should then appear when you run `resolvectl status`
-
-   
-
+4. And then making it immutable (a bit hacky): `sudo chattr +i /etc/resolv.conf`
 
 
